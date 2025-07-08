@@ -88,49 +88,28 @@ function App() {
 
   return (
     <div className="App">
-      {/* Top Section */}
-      <section className="top-section">
-        <div className="container top-bar">
-          <div className="left-bar">
-            <span id="top-text">World's Largest Medical Equipment Market Place</span>
-          </div>
-          <div className="right-bar">
-            <a href="https://1mdm.com/index.php?route=account/account"><span>My account |</span></a>
-            <a href="contact.php"><span>Contact Us</span></a>
-          </div>
-        </div>
-      </section>
+      {/* Top Bar */}
+      <div className="top-bar-proportional">
+        <span className="top-bar-left">World's Largest Medical Equipment Market Place</span>
+        <span className="top-bar-right">
+          <a href="https://1mdm.com/index.php?route=account/account">My account</a> |
+          <a href="contact.php">Contact Us</a>
+        </span>
+      </div>
       {/* Navigation */}
-      <section className="menubar sticky-top">
-        <div className="container">
-          <nav className="navbar navbar-expand-lg bg-light">
-            <div className="container-fluid">
-              <a href="https://1mdm.com/" target="_blank" rel="noopener noreferrer">
-                <img className="logo" src="https://1mdm.com/about/assets/1mdm-168x58.png" alt="1MDM logo" />
-              </a>
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li className="nav-item">
-                    <a className="nav-link" href="index.php">About Us</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="our-story.php">Our Story</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="seller.php">Sell on 1MDM</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="pricing.php">Pricing</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+      <nav className="navbar-proportional">
+        <div className="navbar-logo">
+          <a href="https://1mdm.com/" target="_blank" rel="noopener noreferrer">
+            <img className="logo" src="https://1mdm.com/about/assets/1mdm-168x58.png" alt="1MDM logo" />
+          </a>
         </div>
-      </section>
+        <ul className="navbar-links">
+          <li><a href="index.php">About Us</a></li>
+          <li><a href="our-story.php">Our Story</a></li>
+          <li><a href="seller.php">Sell on 1MDM</a></li>
+          <li><a href="pricing.php">Pricing</a></li>
+        </ul>
+      </nav>
       {/* Banner Section */}
       <section className="banner-img">
         <div className="container banner">
@@ -165,20 +144,15 @@ function App() {
       <section>
         <div className="container banner-bottom">
           <h2 className="banner-heading">1mdm.com is a leading ecommerce platform that <br /> helps SMEs go global</h2>
-          <br />
-          <br />
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="ratio ratio-16x9">
                 <iframe src="https://www.youtube.com/embed/TN7iJyc5Uks" title="YouTube video" allowFullScreen></iframe>
               </div>
-              <br />
             </div>
-            <div className="col">
+            <div className="col-md-6 banner-bottom-texts">
               <p className="para">Connect with millions of business buyers from around the world.</p>
-              <br />
               <p className="para">Get the tools and know-how to build a successful ecommerce presence for your business.</p>
-              <br />
               <p className="para">Pocket more from each sale, with take rates as low as 0% in some cases.</p>
             </div>
           </div>
@@ -258,11 +232,11 @@ function App() {
           </div>
           <button className="carousel-control-prev" type="button" onClick={prevSlide}>
             <i className="bi bi-arrow-left-circle-fill"></i>
-            <span className="visually-hidden">Previous</span>
+           
           </button>
           <button className="carousel-control-next" type="button" onClick={nextSlide}>
             <i className="bi bi-arrow-right-circle-fill"></i>
-            <span className="visually-hidden">Next</span>
+            
           </button>
         </div>
       </section>
@@ -322,12 +296,14 @@ function App() {
         </div>
       </section>
       {/* Floating Buttons */}
-      <a id="float-icon-1" href="pricing.php" className="float-1">
-        <p><i className="bi bi-cart-check"></i> Start Selling</p>
-      </a>
-      <a id="float-icon-1" href="https://wa.me/+919943005109" target="_blank" rel="noopener noreferrer" className="float">
-        <p><i className="bi bi-headset"></i> Customer Service</p>
-      </a>
+      <div className="floating-buttons">
+        <a href="pricing.php" className="float-btn">
+          <span><i className="bi bi-cart-check"></i> Start Selling</span>
+        </a>
+        <a href="https://wa.me/+919943005109" target="_blank" rel="noopener noreferrer" className="float-btn">
+          <span><i className="bi bi-headset"></i> Customer Service</span>
+        </a>
+      </div>
       {/* Copyright */}
       <section className="copyright">
         <br />
